@@ -585,3 +585,20 @@
 	};
 
 })(jQuery);
+
+function sendEmail() {
+	name = document.getElementById("name");
+	email = document.getElementById("email");
+	message = document.getElementB>yId("message");
+
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : name,
+	To : email,
+	From : "robert@riskjigsaw.co.nz",
+	Subject : "Reaching out!!",
+	Body : message,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
