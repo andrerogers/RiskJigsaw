@@ -587,14 +587,14 @@
 })(jQuery);
 
 function sendEmail() {
-	name = document.getElementById("name").value;
-	if(name === "") alert("Please enter your name"); return;
+	// name = document.getElementById("name").value;
+	// if(name === "") alert("Please enter your name"); return;
 
-	email = document.getElementById("email").value;
-	if(email === "") alert("Please enter your email"); return;
+	// email = document.getElementById("email").value;
+	// if(email === "") alert("Please enter your email"); return;
 
-	message = document.getElementById("message").value;
-	if(message === "") alert("No message entered!!"); return;
+	// message = document.getElementById("message").value;
+	// if(message === "") alert("No message entered!!"); return;
 
 	Email.send({
 	Host: "smtp.gmail.com",
@@ -606,4 +606,9 @@ function sendEmail() {
 	}).then(
 		message => alert("mail sent successfully")
 	);
+
+	// var mailto_link = 'mailto:' + email + '?subject=Reaching out!!' + '&body=' + message;
+
+    // win = window.open(mailto_link, 'emailWindow');
+    // if (win && win.open && !win.closed) win.close();
 }
