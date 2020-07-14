@@ -587,15 +587,20 @@
 })(jQuery);
 
 function sendEmail() {
-	name = document.getElementById("name");
-	email = document.getElementById("email");
-	message = document.getElementB>yId("message");
+	name = document.getElementById("name").value;
+	if(name === "") alert("Please enter your name"); return;
+
+	email = document.getElementById("email").value;
+	if(email === "") alert("Please enter your email"); return;
+
+	message = document.getElementById("message").value;
+	if(message === "") alert("No message entered!!"); return;
 
 	Email.send({
 	Host: "smtp.gmail.com",
 	Username : name,
-	To : email,
-	From : "robert@riskjigsaw.co.nz",
+	From : email,
+	To : "robert@riskjigsaw.co.nz",
 	Subject : "Reaching out!!",
 	Body : message,
 	}).then(
